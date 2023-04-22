@@ -1,6 +1,6 @@
 package org.example.modulithdemo.modules.one
 
-import org.example.modulithdemo.modules.ComponentRoot
+import org.example.modulithdemo.root.ComponentRoot
 import org.example.modulithdemo.modules.two.ComponentTwo
 import org.springframework.stereotype.Component
 

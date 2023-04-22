@@ -1,4 +1,4 @@
-package org.example.modulithdemo.modules
+package org.example.modulithdemo.root
 
 import org.example.modulithdemo.modules.one.ComponentOne
 import org.springframework.stereotype.Component

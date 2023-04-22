@@ -15,9 +15,8 @@ class CustomApplicationModuleDetectionStrategy : ApplicationModuleDetectionStrat
      */
     override fun getModuleBasePackages(basePackage: JavaPackage): Stream<JavaPackage> =
         when (basePackage.name) {
-            "org.example.modulithdemo.modules" -> basePackage.directSubPackages.stream().filter {
-                it.name == "org.example.modulithdemo.modules.one" || it.name == "org.example.modulithdemo.modules.two"
-            }
+            "org.example.modulithdemo.modules" -> basePackage.directSubPackages.stream().flatMap { getModuleBasePackages(it) }
+            "org.example.modulithdemo.modules.root", "org.example.modulithdemo.modules.one", "org.example.modulithdemo.modules.two" -> Stream.of(basePackage)
             else -> Stream.empty()
         }
 }
