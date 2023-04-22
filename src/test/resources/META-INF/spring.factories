@@ -1,0 +1,1 @@
+org.springframework.modulith.core.ApplicationModuleDetectionStrategy=org.example.modulithdemo.CustomApplicationModuleDetectionStrategy
